@@ -54,7 +54,8 @@ const options = {
         const secondsElement = timerElement.querySelector('[data-seconds]');
 
     const intervalId = setInterval(() => {
-        const timeLeft = selectedDate - currentDate;
+      const currentTime = new Date();
+        const timeLeft = selectedDate - currentTime;
     
         if (timeLeft <= 0) {
             clearInterval(intervalId); 
